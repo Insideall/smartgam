@@ -1,11 +1,11 @@
 # DFP Prebid LineItems Setup Tool
-Automatically setup and update your Line Items on GAM for [Smart Holistic+]
+Automatically setup and update your Line Items on GAM for **Smart Holistic+**
 
 # DFP Setup Tool for Prebid
-An automated GAM line item generator for [Smart Holistic](http://prebid.org/)
+An automated GAM line item generator for **Smart Holistic+**
 
 ## Overview
-When setting up Smart Holistic, your ad ops team would have  to create [hundreds of line items] in GAM.
+When setting up Smart Holistic+, your ad ops team would have  to create hundreds of line items in GAM.
 
 This tool automates setup for GAM.
 
