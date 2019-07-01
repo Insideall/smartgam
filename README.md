@@ -47,38 +47,20 @@ You will need credentials to access your DFP account programmatically. This summ
 ### Verifying Setup
 Let's try it out! From the top level directory, run
 
-`php script/tests/ConnexionTest.php`
+`php script/connexionTest.php`
 
 and you should whether the connexion is OK or not
 
 ## Creating Line Items
 
-Modify the settings in 
-`/script/hb/HeaderBiddingCreation.php`
-* SSP must be an array of ssp you want to create - please enter here the bidder code defined in prebid documentation
-* Price Granularity are standards, defined on [prebid.org](http://prebid.org/prebid-mobile/adops-price-granularity.html). You can also define a custom granularity by passing an array of buckets in the following format 
-    
-    ```
-        'priceGranularity' => [ 
-            'buckets' => [
-                ['min' => 0, 'max' => 5, 'increment' => 0.05, 'precision' => 2 /* optional */],
-                ['min' => 5, 'max' => 10, 'increment' => 0.1, 'precision' => 2 /* optional */],
-                ['min' => 10, 'max' => 20, 'increment' => 0.5, 'precision' => 2 /* optional */],
-            ]
-        ]
-    ```
-* Currency is the AdServer Currency (USD, EUR...)
-* Sizes: please enter all sizes allowed on your inventory 
+Modify the following settings in script/smartGamSetup.php
 
+* Currency is the AdServer Currency (USD, EUR...)
+* NetworkId according to your networkId
 
 Then, from the root of the repository, run:
 
-`php script/hb/HeaderBiddingCreation.php`
+`php script/smartGamSetup`
 
-You should be all set! Review your order, line items, and creatives to make sure they are correct. Then, approve the order in DFP.
+You should be all set! Review your order, line items, and creatives to make sure they are correct. Then, approve the order in GAM.
 
-*Note: DFP might show a "Needs creatives" warning on the order for ~15 minutes after order creation. Typically, the warning is incorrect and will disappear on its own.*
-
-## Limitations
-* This tool does not support additional line item targeting beyond placement, hb_bidder, and hb_pb values. Placement targeting is currently required, and targeting by ad unit isn't supported
-* This tool does not modify existing orders or line items, it only creates them. If you need to make a change to an order, it's easiest to archive the existing order and recreate it. However, once orders are created, you can easily update them (change Price Granularity, change Available Sizes)

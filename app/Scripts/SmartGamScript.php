@@ -9,6 +9,7 @@ class SmartGamScript
 	protected $orderId;
 	protected $keyId;
 	protected $adsApi;
+	protected $currency = "";
 
 	public function setCredentials($credentials)
 	{
@@ -26,13 +27,14 @@ class SmartGamScript
 
 	public function CreateSmartGamCampaign()
 	{
-		
+		if($this->currency == ""){
+			die("Currency needs to be set");
+		}
 		$this->orderName = "Smart Holistic Tool";
 		$this->advertiserName = "Smart Holistic Tool";
 		$this->priceGranularity = "dense";
 		$this->sizes = [[120,600],[160,600],[300,50],[300,100],[300,250],[300,600],[300,1000],[320,50],[320,100],[336,280],[728,90],[970,90],[970,150],[970,250],[1000,90],[1000,200],[1000,250],[1000,300]];
 		$this->priceKeyName = "smart_cpm";
-		$this->currency = "EUR";
 		$this->createLineItems();
 
 		return $this;
@@ -106,5 +108,11 @@ class SmartGamScript
 		
 		(new \App\AdManager\OrderManager())->approveOrder($this->orderId);
 		
+	}
+
+	public function setCurrency($currency)
+	{
+		$this->currency = $currency;
+		return $this;
 	}
 }
