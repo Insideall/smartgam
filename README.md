@@ -38,7 +38,7 @@ You will need credentials to access your GAM account programmatically. This summ
 4. Make a copy of [adsapi_php.ini](https://github.com/googleads/googleads-php-lib/blob/master/examples/AdManager/adsapi_php.ini) and save it into the project root folder.
 5. In `adsapi_php.ini`, set the required fields:
    * `application_name` is the name of the application you used to get your Google developer credentials
-   * `network_code` is your DFP network number; e.g., for `https://www.google.com/dfp/12398712#delivery`, the network code is `12398712`.
+   * `network_code` is your GAM network number; e.g., for `https://www.google.com/dfp/12398712#delivery`, the network code is `12398712`.
    * `jsonKeyFilePath`is the path to your JSON key file
    * `scopes` is "https://www.googleapis.com/auth/dfp"
    * `impersonatedEmail` is the email account of the user you want to impersonate as, if any (something like user@app.iam.gserviceaccount.com)
@@ -59,7 +59,7 @@ Modify the following settings in script/smartGamSetup.php
 
 Then, from the root of the repository, run:
 
-`php script/smartGamSetup`
+`php script/smartGamSetup.php`
 
 You should be all set! Review your order, line items, and creatives to make sure they are correct. Then, approve the order in GAM.
 
