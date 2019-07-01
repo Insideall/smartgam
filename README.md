@@ -1,21 +1,20 @@
 # DFP Prebid LineItems Setup Tool
-Automatically setup and update your Line Items on DFP for [Prebid.js](http://prebid.org/)
+Automatically setup and update your Line Items on GAM for [Smart Holistic+]
 
 # DFP Setup Tool for Prebid
-An automated DFP line item generator for [Prebid.js](http://prebid.org/)
+An automated GAM line item generator for [Smart Holistic](http://prebid.org/)
 
 ## Overview
-When setting up Prebid, your ad ops team often has to create [hundreds of line items](http://prebid.org/adops.html) in DFP.
+When setting up Smart Holistic, your ad ops team would have  to create [hundreds of line items] in GAM.
 
-This tool automates setup for new header bidding partners. You define the advertiser, placements, and Prebid settings; then, it creates an order with one line item per price level, attaches creatives, and sets placement and Prebid key-value targeting.
+This tool automates setup for GAM.
 
-While this tool covers typical use cases, it might not fit your needs. Check out the [limitations](#limitations) before you dive in.
 
 ## Getting Started
 
 ### Creating Google Credentials
-You will need credentials to access your DFP account programmatically. This summarizes steps from [DFP docs](https://developers.google.com/doubleclick-publishers/docs/authentication) and the DFP PHP library [auth guide](https://github.com/googleads/googleads-php-lib).
-1. If you haven't yet, sign up for a [DFP account](https://www.doubleclickbygoogle.com/solutions/revenue-management/dfp/).
+You will need credentials to access your GAM account programmatically. This summarizes steps from [DFP docs](https://developers.google.com/doubleclick-publishers/docs/authentication) and the GAM PHP library [auth guide](https://github.com/googleads/googleads-php-lib).
+1. If you haven't yet, sign up for a [GAM account](https://www.doubleclickbygoogle.com/solutions/revenue-management/dfp/).
 2. Create Google developer credentials
    * Go to the [Google Developers Console Credentials page](https://console.developers.google.com/apis/credentials).
    * On the **Credentials** page, select **Create credentials**, then select **Service account key**.
