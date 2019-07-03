@@ -8,7 +8,7 @@ $jsonKeyFilePath = "/home/gabriel/dfp/googleServiceAccount.json";
 $scopes = "https://www.googleapis.com/auth/dfp";
 $impersonatedEmail = "insideall@headerbidding-199413.iam.gserviceaccount.com";
 
-$networkCode = 21700827184;
+$networkCode = 19391845;
 $currency = "EUR";
 
 $credentials = array(
