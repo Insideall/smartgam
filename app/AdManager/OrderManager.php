@@ -2,12 +2,10 @@
 
 namespace App\AdManager;
 
-require __DIR__.'/../../vendor/autoload.php';
-
-use Google\AdsApi\AdManager\v201811\Order;
-use Google\AdsApi\AdManager\Util\v201811\StatementBuilder;
-use Google\AdsApi\AdManager\v201811\ApproveOrders as ApproveOrdersAction;
-use Google\AdsApi\AdManager\v201811\ApiException;
+use Google\AdsApi\AdManager\v201911\Order;
+use Google\AdsApi\AdManager\Util\v201911\StatementBuilder;
+use Google\AdsApi\AdManager\v201911\ApproveOrders as ApproveOrdersAction;
+use Google\AdsApi\AdManager\v201911\ApiException;
 
 
 class OrderManager extends Manager
